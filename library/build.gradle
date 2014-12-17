@@ -6,12 +6,11 @@ repositories {
 }
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
-
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 15
+        targetSdkVersion 21
 
         versionName rootProject.VERSION_NAME
         versionCode Integer.parseInt(rootProject.VERSION_CODE)
@@ -21,11 +20,11 @@ android {
 apply plugin: 'android-unit-test'
 
 dependencies {
-    compile 'com.android.support:support-v4:19.+'
+    compile 'com.android.support:support-v4:21.0.3'
     // Robolectric tests
     testCompile 'junit:junit:4.11'
     testCompile 'org.mockito:mockito-core:1.9.5'
-    testCompile 'com.squareup:fest-android:1.0.+'
+    testCompile 'com.squareup:fest-android:1.0.8'
     testCompile('org.robolectric:robolectric:2.4') {
         exclude module: 'classworlds'
         exclude module: 'commons-logging'
